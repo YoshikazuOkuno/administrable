@@ -15,13 +15,13 @@ class Admin::MembersControllerTest < ActionController::TestCase
 
   test 'show' do
     member = members(:one)
-    get :show, id: member.id
+    get :show, params: {id: member.id}
     assert_response :success
   end
 
   test 'edit' do
     member = members(:one)
-    get :edit, id: member.id
+    get :edit, params: {id: member.id}
     assert_response :success
   end
 end

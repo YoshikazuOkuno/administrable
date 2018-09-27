@@ -1,0 +1,19 @@
+- case field_strategy.field_type(model_class, attr)
+  - when :belongs_to
+    = render partial: 'input_belongs_to', locals: {f: f, attr: attr}
+  - when :enum
+    = render partial: 'input_enum', locals: {f: f, attr: attr}
+  - when :boolean
+    = render partial: 'input_boolean', locals: {f: f, attr: attr}
+  - when :text
+    = render partial: 'input_text', locals: {f: f, attr: attr}
+  - when :integer
+    = render partial: 'input_integer', locals: {f: f, attr: attr}
+  - when :date
+    = render partial: 'input_date', locals: {f: f, attr: attr}
+  - when :datetime
+    = render partial: 'input_datetime', locals: {f: f, attr: attr}
+  - when :time
+    = render partial: 'input_time', locals: {f: f, attr: attr}
+  - else
+    = render partial: 'input_default_field', locals: {f: f, attr: attr}

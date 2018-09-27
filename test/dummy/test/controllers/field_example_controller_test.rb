@@ -10,13 +10,13 @@ class FieldExamplesControllerTest < ActionController::TestCase
 
   test 'show' do
     field_example = field_examples(:one)
-    get :show, id: field_example.id
+    get :show, params: {id: field_example.id}
     assert_response :success
   end
 
   test 'edit' do
     field_example = field_examples(:one)
-    get :edit, id: field_example.id
+    get :edit, params: {id: field_example.id}
     assert_response :success
   end
 end

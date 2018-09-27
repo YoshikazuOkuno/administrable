@@ -15,20 +15,20 @@ class Admin::Master::CompaniesControllerTest < ActionController::TestCase
   
   test 'show' do
     company = companies(:one)
-    get :show, id: company.id
+    get :show, params: {id: company.id}
     assert_response :success
   end
   
   test 'edit' do
     company = companies(:one)
-    get :edit, id: company.id
+    get :edit, params: {id: company.id}
     assert_response :success
   end
   
   test 'destroy' do
     company = companies(:one)
     assert_true Company.where(id: company.id).exists?
-    post :destroy, id: company.id
+    post :destroy, params: {id: company.id}
     assert_response :redirect
     assert_false Company.where(id: company.id).exists?
   end
