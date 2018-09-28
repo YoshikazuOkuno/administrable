@@ -22,7 +22,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'bootstrap-sass', '~> 3.3.5'
   s.add_dependency 'sass-rails', '>= 3.2'
   s.add_dependency 'coffee-rails', '>= 4.0.0'
-  s.add_dependency 'haml-rails'
+  s.add_dependency 'slim-rails', '>= 3.1.3'
   s.add_dependency 'kaminari'
   s.add_dependency 'ransack'
   s.add_dependency 'enum_help'

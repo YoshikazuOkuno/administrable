@@ -1,0 +1,23 @@
+- self.title = I18n.t('administrable.page_title.index', model_name: model_class.model_name.human)
+
+.row
+  .col-sm-10
+    h1
+      = title
+  .col-sm-2.text-right
+    .row
+      - # TODO:
+      h1
+        a.btn.btn-primary.btn-new.btn-sm href=administrable_new_path
+          i.glyphicon.glyphicon-plus
+          = I18n.t('administrable.new')
+.row
+  = render partial: 'search_form', locals: {search_fields: @search_fields, q: @q}
+
+.row
+  .text-center
+    = paginate @resources
+  
+  = render partial: 'search_result', locals: {resources: @resources, header_fields: @search_results_header_fields, row_fields: @search_results_row_fields}
+  .text-center
+    = paginate @resources
