@@ -1,4 +1,4 @@
-class CreateFieldExamples < ActiveRecord::Migration
+class CreateFieldExamples < ActiveRecord::Migration[4.2]
   def change
     create_table :field_examples do |t|
       t.references :member, index: true, foreign_key: true
