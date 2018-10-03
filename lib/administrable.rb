@@ -4,7 +4,7 @@ end
 require 'active_record'
 require 'sass-rails'
 require 'jquery-rails'
-require 'bootstrap-sass'
+require 'bootstrap'
 require 'coffee-rails'
 require 'slim-rails'
 require 'ransack'
